@@ -1,6 +1,7 @@
 # SyntaxSugar
 
-TODO: Write a gem description
+This lib target to help you create some dynamic syntax 
+where you could create method name based logic for factory like use cases.
 
 ## Installation
 
@@ -18,7 +19,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+
+    require 'syntax_sugar'
+    
+    hash = Hash.new
+    sugar = SyntaxSugar::NullObject.new(hash, /^(.*)=$/ => :[]=, /^get_(.*)$/ => :[], /^fetch$/ => :[])
+    
+    sugar.asd = 'cat'
+    p sugar.get_asd #> "cat"
+    p hash #> {"asd"=>"cat"}
+    p sugar.fetch 'asd' #> "cat"
+
+```
+
 
 ## Contributing
 

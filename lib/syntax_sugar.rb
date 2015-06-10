@@ -1,5 +1,4 @@
-require "syntax_sugar/version"
-
 module SyntaxSugar
-  # Your code goes here...
+  require 'syntax_sugar/version'
+  require 'syntax_sugar/null_object'
 end

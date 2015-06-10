@@ -1,3 +1,1 @@
-module SyntaxSugar
-  VERSION = "0.0.1.alpha"
-end
+SyntaxSugar::VERSION = '1.0.0'
